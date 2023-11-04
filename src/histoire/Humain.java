@@ -1,17 +1,17 @@
 package histoire;
 
 public class Humain {
-	private String  nom;
-	private String boissonFavori;
-	private int quantiteArgent;
+	protected String  nom;
+	protected String boissonFavori;
+	protected int argent;
 	
-	public Humain(String nom, String boissonFavori, int quantiteArgent) {
+	public Humain(String nom, String boissonFavori, int argent) {
 		this.nom = nom;
 		this.boissonFavori = boissonFavori;
-		this.quantiteArgent = quantiteArgent;
+		this.argent = argent;
 	}
-	public void parler(String texte) {
-		System.out.println(texte);
+	protected void parler(String texte) {
+		System.out.println("(" + nom + ") " + texte);
 	}
 	public void direBonjour() {
 		parler("Bonjour! Je m'appelle " + nom + "Et mon boisson favori est " + boissonFavori);
@@ -21,18 +21,18 @@ public class Humain {
 		parler("Hmmm ! Un bon verre de " + boissonFavori + "GLOUPS !");
 	}
 	public void perdreArgent(int perte) {
-		quantiteArgent-=perte;
+		argent-=perte;
 	}
 	public void gagnerArgent(int gain) {
-		quantiteArgent+=gain;
+		argent+=gain;
 	}
 	public void acheter(String bien, int prix) {
-		if (prix<=quantiteArgent) {
-			parler("J'ai" + quantiteArgent + "sous en poche. Je vais pouvoir m'offrir une boisson à " + prix + " sous");
+		if (prix<=argent) {
+			parler("J'ai " + argent + " sous en poche. Je vais pouvoir m'offrir une boisson a " + prix + " sous");
 			perdreArgent(prix);	
 		}
 		else {
-			parler("Je n'ai plus que" + quantiteArgent + "sous en poche. Je ne peux même pas m'offrir un "+ bien + "à" + prix + "sous");
+			parler("Je n'ai plus que " + argent + " sous en poche. Je ne peux meme pas m'offrir un "+ bien + " a " + prix + " sous");
 		}
 	}
 	
@@ -43,8 +43,8 @@ public class Humain {
 		return boissonFavori;
 	}
 	
-	public int getQuantiteArgent() {
-		return quantiteArgent;
+	public int getArgent() {
+		return argent;
 	}
 	
 	
