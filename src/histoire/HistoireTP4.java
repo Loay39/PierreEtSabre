@@ -13,6 +13,11 @@ public class HistoireTP4 {
 		marco.seFaireExtorquer();
 		marco.recevoir(15);
 		marco.boire();
+		Yakuza yuko = new Yakuza("Yoku Le Noir ", "Le Wiskhy ", 30 , "Warsong ");
+		yuko.direBonjour();
+		yuko.extorquer(marco);
+		
+		
 	}
 
 }
