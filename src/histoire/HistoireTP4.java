@@ -19,8 +19,8 @@ public class HistoireTP4 {
 		Ronin roro = new Ronin("Roro ", "shochu ", 60);
 		roro.direBonjour();
 		roro.donner(marco);
-		
-		
+		roro.parler(" Je t'ai retrouvé vermine, tu vas payer pour ce que tu as fait à ce pauvre marchand!");
+		roro.provoquer(yuko);
 	}
 
 }
