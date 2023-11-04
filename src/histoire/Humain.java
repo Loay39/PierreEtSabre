@@ -11,7 +11,7 @@ public class Humain {
 		this.argent = argent;
 	}
 	protected void parler(String texte) {
-		System.out.println("(" + nom + ") " + texte);
+		System.out.println("(" + nom + ") - " + texte);
 	}
 	public void direBonjour() {
 		parler("Bonjour! Je m'appelle " + nom + "Et mon boisson favori est " + boissonFavori);
