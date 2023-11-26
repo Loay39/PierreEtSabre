@@ -1,12 +1,12 @@
 package histoire;
 
 public class Ronin extends Humain {
-	int attributHonneur = 1 ;
+	private int attributHonneur = 1 ;
 	public Ronin(String nom, String boissonFavori, int argent) {
 		super(nom,boissonFavori,argent);
 	}
 	void donner(Commercant beneficiaire) {
-		double argentDonne = 0.1 * argent;
+		double argentDonne = 0.1 * getArgent();
 		int argentDonneInt = (int) argentDonne;
 		parler("Marco prend ces "+argentDonneInt+" sous");
 		beneficiaire.recevoir(argentDonneInt);
@@ -18,9 +18,10 @@ public class Ronin extends Humain {
 			parler("Je t’ai eu petit yakusa ");
 			int argentGagne= adversaire.perdre();
 			gagnerArgent(argentGagne);
+			attributHonneur++;
 		} else {
 			parler("J'ai perdu contre ce yakuza, mon honneur et ma bourse ont en pris un coup.");
-			adversaire.gagner(argent);
+			adversaire.gagner(getArgent());
 		}
 	}
 }

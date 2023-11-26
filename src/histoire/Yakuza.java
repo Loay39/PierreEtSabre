@@ -18,12 +18,12 @@ public class Yakuza extends Humain{
 		int argentVole=victime.seFaireExtorquer();
 		gagnerArgent(argentVole);
 		reputation++;
-		parler("J'ai pique les "+argentVole+" de "+ victime.getNom() + " ce qui me fait " + argent + " sous dans ma poche. Hi ! Hi !");
+		parler("J'ai pique les "+argentVole+" de "+ victime.getNom() + " ce qui me fait " + getArgent() + " sous dans ma poche. Hi ! Hi !");
 	}
 	public int perdre() {
-		parler("J’ai perdu mon duel et mes " + argent + " sous, snif... J'ai déshonoré le clan de " + clan);
-		int argentPerdu = argent;
-		perdreArgent(argent);
+		parler("J’ai perdu mon duel et mes " + getArgent() + " sous, snif... J'ai déshonoré le clan de " + clan);
+		int argentPerdu = getArgent();
+		perdreArgent(getArgent());
 		reputation--;
 		return argentPerdu;
 		

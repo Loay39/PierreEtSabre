@@ -1,12 +1,15 @@
 package histoire;
 
+
+
 public class Commercant extends Humain {
-	public Commercant(String nom , String boissonFavori ,int argent) {
-		super(nom,boissonFavori,argent); 		
+	public Commercant(String nom , int argent) {
+		super(nom,"thé",argent);
+		
 	} 
 	public int seFaireExtorquer() {
-		int argentPerdu = argent;
-		perdreArgent(argent);
+		int argentPerdu = getArgent();
+		perdreArgent(argentPerdu);
 		parler("J’ai tout perdu! Le monde est trop injuste...");
 		return argentPerdu;
 	}

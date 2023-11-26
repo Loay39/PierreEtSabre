@@ -8,7 +8,7 @@ public class HistoireTP4 {
 		prof.boire();
 		prof.acheter("un jeu", 2);
 		prof.acheter("kimono", 50);
-		Commercant marco = new Commercant("Marco", "The", 20);
+		Commercant marco = new Commercant("Marco", 20);
 		marco.direBonjour();
 		marco.seFaireExtorquer();
 		marco.recevoir(15);
@@ -20,7 +20,7 @@ public class HistoireTP4 {
 		roro.direBonjour();
 		roro.donner(marco);
 		roro.parler(" Je t'ai retrouvé vermine, tu vas payer pour ce que tu as fait à ce pauvre marchand!");
-		roro.provoquer(yuko);
+		roro.provoquer(yuko);	
 	}
 
 }
