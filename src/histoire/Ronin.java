@@ -5,7 +5,7 @@ public class Ronin extends Humain {
 	public Ronin(String nom, String boissonFavori, int argent) {
 		super(nom,boissonFavori,argent);
 	}
-	void donner(Commercant beneficiaire) {
+	public void donner(Commercant beneficiaire) {
 		double argentDonne = 0.1 * getArgent();
 		int argentDonneInt = (int) argentDonne;
 		parler("Marco prend ces "+argentDonneInt+" sous");

@@ -73,10 +73,12 @@ public class Humain {
 		parler(chaine);
 	}
 	
-	@Override
-	public String toString() {
-		return "Humain [memoire=" + Arrays.toString(memoire) + "]";
+	
+	
+	public Humain[] getMemoire() {
+		return memoire;
 	}
+	
 	
 	public String getNom() {
 		return nom;
